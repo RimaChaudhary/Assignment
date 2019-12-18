@@ -1,4 +1,5 @@
 package com.example.assignment.Adapter;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +7,9 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,8 +48,8 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Ch
             public void onClick(View view) {
                 String setword = word.getText().toString() + characterList[position];
                 word.setText(setword);
-                holder.txtChar.setTextColor(context.getResources().getColor(R.color.colorBlack));
-                holder.txtChar.setBackgroundColor(context.getResources().getColor(R.color.colorGray));
+                holder.txtChar.setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                holder.txtChar.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
                 holder.txtChar.setOnClickListener(null);
             }
         });
@@ -69,4 +73,3 @@ public class CharactersAdapter extends RecyclerView.Adapter<CharactersAdapter.Ch
         }
     }
 }
-

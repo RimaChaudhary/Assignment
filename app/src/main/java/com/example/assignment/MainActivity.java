@@ -1,7 +1,5 @@
 package com.example.assignment;
 
-
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,7 +22,7 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private String[] words = {"birds", "animals", "humans", "fruits", "reptiles", "good"};
+    private String[] words = {"birds", "animals", "flowers", "humans", "fruits", "vegetables"};
     private EditText etWord;
     SharedPreferences sharedPreferences;
     private RecyclerView recyclerView;
@@ -37,12 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         textView =findViewById(R.id.leveltext);
         Button btnOK = findViewById(R.id.btnOK);
-        Button btnClear = findViewById(R.id.btnClear);
+        Button btnClean = findViewById(R.id.btnClear);
         etWord = findViewById(R.id.etWord);
         recyclerView = findViewById(R.id.recyclerView);
 
-//        listWords = findViewById(R.id.listWords);
-//        showWord(level);
+        // listWords = findViewById(R.id.listWords);
+        showWord(level);
         SharedPreferences savedata = getSharedPreferences("Game", Context.MODE_PRIVATE);
         if (savedata.getInt("Level",0)==0) {
             showWord(level);
@@ -54,14 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         btnOK.setOnClickListener(this);
-        btnClear.setOnClickListener(this);
+        btnClean.setOnClickListener(this);
 
-//        listWords.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                etWord.append(parent.getItemAtPosition(position).toString());
-//            }
-//        });
     }
 
     private Character[] shuffleWords(int level){
