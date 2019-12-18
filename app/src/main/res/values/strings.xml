@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="textName">DEFAULT NAME</string>
+    <string name="textEmail">DEFAULT EMAIL</string>
+    <string name="textPhone">DEFAULT PHONE</string>
+</resources>
+
